@@ -1,0 +1,22 @@
+{
+  "domain": "eggma.fr",
+  "title": "Eggma",
+  "fonts": [],
+  "styles": [],
+  "scripts": {
+    "main": "main"
+  },
+  "manifest": {
+    "name": "",
+    "short_name": "Untitled",
+    "start_url": "/",
+    "display": "standalone",
+    "lang": "en"
+  },
+  "gzip": true,
+  "gzipCache": true,
+  "ports": {
+    "http": 4000,
+    "https": 4001
+  }
+}

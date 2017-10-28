@@ -1,0 +1,34 @@
+component Layout(app *aero.Application, ctx *aero.Context, user *arn.User, openGraph *arn.OpenGraph, content string)
+    html(lang="en")
+        head
+            if openGraph != nil
+                title= openGraph.Tags["og:title"]
+            else
+                title= app.Config.Title
+
+            meta(name="viewport", content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
+            meta(name="theme-color", content=app.Config.Manifest.ThemeColor)
+
+            if openGraph != nil
+                for name, value := range openGraph.Meta
+                    meta(name=name, content=value)
+
+                for property, content := range openGraph.Tags
+                    meta(property=property, content=content)
+
+            link(rel="chrome-webstore-item", href="https://chrome.google.com/webstore/detail/hajchfikckiofgilinkpifobdbiajfch")
+            link(rel="manifest", href="/manifest.json")
+        body
+            #container(class=utils.GetContainerClass(ctx))
+                //- #header
+                //- 	Navigation(user)
+                #columns
+                    aside#sidebar
+                        Sidebar(user)
+                    #content-containerK
+                        main#content.fade!= content
+                LoadingAnimation
+                StatusMessage
+            if user != nil
+                #user(data-id=user.ID)
+            script(src="/scripts")
