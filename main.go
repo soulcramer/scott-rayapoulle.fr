@@ -11,7 +11,7 @@ func main() {
 
 func configure(app *aero.Application) *aero.Application {
 	app.Get("/", func(ctx *aero.Context) string {
-		return ctx.Text("Hello World")
+		return ctx.Text("Bienvenue sur Eggma.fr!")
 	})
 
 	return app
