@@ -2,7 +2,7 @@ package frontpage
 
 import (
 	"github.com/aerogo/aero"
-	"github.com/soulcramer/eggma.fr/components"
+	"github.com/soulcramer/scott-rayapoulle.fr/components"
 )
 
 // Get ...

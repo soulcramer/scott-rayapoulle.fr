@@ -2,7 +2,7 @@ package layout
 
 import (
 	"github.com/aerogo/aero"
-	"github.com/soulcramer/eggma.fr/components"
+	"github.com/soulcramer/scott-rayapoulle.fr/components"
 )
 
 // Render layout.

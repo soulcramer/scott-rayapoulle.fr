@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/aerogo/aero"
-	"github.com/soulcramer/eggma.fr/components/css"
-	"github.com/soulcramer/eggma.fr/layout"
-	"github.com/soulcramer/eggma.fr/page/frontpage"
-	"github.com/soulcramer/eggma.fr/middleware"
+	"github.com/soulcramer/scott-rayapoulle.fr/components/css"
+	"github.com/soulcramer/scott-rayapoulle.fr/layout"
+	"github.com/soulcramer/scott-rayapoulle.fr/page/frontpage"
+	"github.com/soulcramer/scott-rayapoulle.fr/middleware"
 )
 
 func main() {

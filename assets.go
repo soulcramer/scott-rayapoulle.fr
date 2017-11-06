@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/aerogo/aero"
-	"github.com/soulcramer/eggma.fr/components/js"
+	"github.com/soulcramer/scott-rayapoulle.fr/components/js"
 )
 
 // configureAssets adds all the routes used for media assets.

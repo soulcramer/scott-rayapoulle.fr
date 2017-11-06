@@ -2,6 +2,7 @@ component FrontPage
 	.frontpage-background
 
 	.frontpage
-		h1.mountable eggma.fr
+		h1.mountable scott-rayapoulle.fr
 
-		h2.mountable Your home for everything about anime.
+		h2.mountable Yop! Yop! I'm building a blog 🤩
+
