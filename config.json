@@ -2,7 +2,11 @@
   "domain": "eggma.fr",
   "title": "Eggma",
   "fonts": [],
-  "styles": [],
+  "styles": [
+    "include/config",
+    "reset",
+    "base"
+  ],
   "scripts": {
     "main": "main"
   },
@@ -11,6 +15,8 @@
     "short_name": "Untitled",
     "start_url": "/",
     "display": "standalone",
+    "theme_color": "#00b8de",
+    "background_color": "#ffffff",
     "lang": "en"
   },
   "gzip": true,

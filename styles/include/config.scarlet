@@ -1,0 +1,15 @@
+// Palette
+primary-text-color = rgba(0, 0, 0, 0.87)
+secondary-text-color = rgba(0, 0, 0, 0.54)
+disabled-text-color = rgba(0, 0, 0, 0.38)
+
+primary-color = #00b8de
+primary-dark-color = #0088ac
+primary-light-color = #64eaff
+
+accent-color = #e5007f
+
+link-hover-color = accent-color
+link-active-color = link-hover-color
+hint-text-color = disabled-text-color
+divider-color = rgba(0, 0, 0, 0.12)

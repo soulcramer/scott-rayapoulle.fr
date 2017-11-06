@@ -1,0 +1,7 @@
+component FrontPage
+	.frontpage-background
+
+	.frontpage
+		h1.mountable eggma.fr
+
+		h2.mountable Your home for everything about anime.

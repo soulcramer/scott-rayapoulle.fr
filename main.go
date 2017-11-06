@@ -2,6 +2,10 @@ package main
 
 import (
 	"github.com/aerogo/aero"
+	"github.com/soulcramer/eggma.fr/components/css"
+	"github.com/soulcramer/eggma.fr/layout"
+	"github.com/soulcramer/eggma.fr/page/frontpage"
+	"github.com/soulcramer/eggma.fr/middleware"
 )
 
 func main() {
@@ -10,9 +14,24 @@ func main() {
 }
 
 func configure(app *aero.Application) *aero.Application {
-	app.Get("/", func(ctx *aero.Context) string {
-		return ctx.Text("Bienvenue sur Eggma.fr!")
-	})
+
+	// CSS
+	app.SetStyle(css.Bundle())
+
+	// Layout
+	app.Layout = layout.Render
+
+	// Ajax routes
+	app.Ajax("/", frontpage.Get)
+
+	// Assets
+	configureAssets(app)
+
+	// Middleware
+	app.Use(
+		middleware.Log(),
+		middleware.Session(),
+	)
 
 	return app
 }
