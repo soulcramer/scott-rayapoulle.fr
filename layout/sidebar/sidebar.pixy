@@ -1,0 +1,27 @@
+component Sidebar
+	aside#sidebar
+		//- User avatar
+		img.user-image.lazy(src="/images/brand/64.png", data-src="/images/brand/64.png", data-webp="true", alt="Photo of scott")
+
+		SidebarButton("Home", "/", "home")
+
+		SidebarButton("Articles", "/articles", "comment")
+		SidebarButton("Animations", "/animations", "th")
+		SidebarButton("Experiments", "/experiments", "calendar")
+
+		.spacer
+
+		.sidebar-social-media
+			SocialMediaButtons
+
+component SidebarButton(name string, target string, icon string)
+	a.sidebar-link.ajax(href=target, aria-label=name, data-bubble="true")
+		.sidebar-button
+			Icon(icon)
+			span.sidebar-text= name
+
+component SidebarButtonNoAJAX(name string, target string, icon string)
+	a.sidebar-link(href=target, aria-label=name, data-bubble="true")
+		.sidebar-button
+			Icon(icon)
+			span.sidebar-text= name

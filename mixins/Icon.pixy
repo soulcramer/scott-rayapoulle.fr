@@ -1,0 +1,5 @@
+component Icon(name string)
+	go:utils.Icon(name)
+
+component RawIcon(name string)
+	go:utils.RawIcon(name)

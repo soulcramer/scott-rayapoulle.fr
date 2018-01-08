@@ -1,0 +1,14 @@
+.light-button-group
+	horizontal-wrap
+	justify-content flex-start
+
+.light-button
+	horizontal
+	display inline-block
+	padding 0.5rem 1rem
+	border-radius 3px
+	font-size 0.9rem
+
+	:hover
+		color theme-white !important
+		background-color link-hover-color

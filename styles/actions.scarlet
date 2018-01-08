@@ -1,0 +1,6 @@
+.buttons
+	horizontal-wrap
+	justify-content center
+
+	button, .button
+		margin 0.5rem

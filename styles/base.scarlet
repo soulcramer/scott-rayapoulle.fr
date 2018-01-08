@@ -1,25 +1,38 @@
 html
 	height 100%
-	font-family "Ubuntu", "Trebuchet MS", sans-serif
+	font-family "Spectral", "Open Sans", sans-serif
 	font-size 100%
+
+> 900px
+	html
+		font-size 90%
+
+> 1400px
+	html
+		font-size 100%
 
 body
 	tab-size 4
 	overflow hidden
 	height 100%
-	color primary-text-color
-	background-color #ffffff
+	color text-color
+	background-color bg-color
 
 a
 	color link-color
 	text-decoration none
+	default-transition
 
 	:hover
 		color link-hover-color
+		text-shadow link-hover-text-shadow
 		text-decoration none
 
 	:active
 		transform translateY(3px)
+
+	// &.active
+	// 	color link-active-color
 
 img
 	backface-visibility hidden

@@ -1,0 +1,9 @@
+.head
+	fill text-color
+
+.body
+	fill text-color
+
+.svg-nick
+	fill bg-color
+	font-size 50%

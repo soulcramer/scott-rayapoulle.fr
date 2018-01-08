@@ -6,7 +6,9 @@ component Layout(app *aero.Application, content string)
 			meta(name="theme-color", content=app.Config.Manifest.ThemeColor)
 			link(rel="manifest", href="/manifest.json")
 		body
-			Content(content)
+			#columns
+				Sidebar
+				Content(content)
 			script(src="/scripts")
 
 component Content(content string)

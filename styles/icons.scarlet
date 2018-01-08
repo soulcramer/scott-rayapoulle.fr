@@ -1,0 +1,16 @@
+.icon
+	width 1em
+	height 1em
+	min-width 1em
+	margin-right 0.5em
+	vertical-align text-bottom
+	fill currentColor
+
+.raw-icon
+	width 1em
+	height 1em
+	min-width 1em
+	fill currentColor
+
+.icon-headphones
+	transform translateY(2px)

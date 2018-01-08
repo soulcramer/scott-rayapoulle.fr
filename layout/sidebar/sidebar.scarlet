@@ -1,0 +1,67 @@
+sidebar-spacing-y = 0.7rem
+
+#sidebar
+	vertical
+	position fixed
+	left 0
+	top 0
+	z-index 10
+	width 70vw
+	max-width 300px
+	height 100%
+	background sidebar-opaque-background
+	transform translateX(-100%)
+	overflow-x hidden
+	overflow-y auto
+	opacity 0
+	pointer-events none
+	box-shadow 24px 0 24px rgba(0, 0, 0, 0.2)
+	transition opacity transition-speed ease, transform transition-speed ease
+	will-change opacity, transition
+
+	.user-image-container
+		display flex
+		flex-direction row
+		justify-content center
+		margin 0.8rem 0
+		flex-shrink 0
+
+> 800px
+	#sidebar
+		opacity 1
+		width 180px
+		transform none
+		position static
+		pointer-events auto
+		box-shadow none
+
+> 1400px
+	#sidebar
+		width 200px
+
+.sidebar-visible
+	transform translateX(0) !important
+	pointer-events auto !important
+	opacity 1 !important
+
+.sidebar-link
+	color text-color
+	font-family "Open Sans"
+
+	&.active
+		.sidebar-button
+			color tab-active-color
+			background tab-active-background
+			text-shadow tab-active-text-shadow
+			background tab-active-background
+
+.sidebar-button
+	display flex
+	flex-direction row
+	align-items center
+	padding sidebar-spacing-y 1rem
+	// background ui-background
+
+	.icon
+		font-size 1rem
+		margin-right 0.75rem

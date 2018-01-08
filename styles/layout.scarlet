@@ -1,0 +1,14 @@
+#container
+	vertical
+	height 100%
+
+#content-container
+	flex 1
+	overflow-x hidden
+	overflow-y scroll
+	position relative
+	// will-change transform
+
+#columns
+	horizontal
+	height 100%

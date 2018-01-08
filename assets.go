@@ -18,11 +18,6 @@ func configureAssets(app *aero.Application) {
 		return ctx.JavaScript(scriptBundle)
 	})
 
-	// Favicon
-	app.Get("/favicon.ico", func(ctx *aero.Context) string {
-		return ctx.TryWebP("images/brand/64", ".png")
-	})
-
 	// For benchmarks
 	app.Get("/hello", func(ctx *aero.Context) string {
 		return ctx.Text("Hello World")

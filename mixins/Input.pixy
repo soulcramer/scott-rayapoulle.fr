@@ -1,0 +1,47 @@
+component InputText(id string, value string, label string, placeholder string)
+	.widget-section
+		label(for=id)= label + ":"
+		input.widget-ui-element.action(id=id, data-field=id, type="text", value=value, placeholder=placeholder, title=placeholder, data-action="save", data-trigger="change")
+
+component InputTextArea(id string, value string, label string, placeholder string)
+	.widget-section
+		label(for=id)= label + ":"
+		textarea.widget-ui-element.action(id=id, data-field=id, placeholder=placeholder, title=placeholder, data-action="save", data-trigger="change")= value
+
+component InputNumber(id string, value float64, label string, placeholder string, min string, max string, step string)
+	.widget-section
+		label(for=id)= label + ":"
+		input.widget-ui-element.action(id=id, data-field=id, type="number", value=value, min=min, max=max, step=step, placeholder=placeholder, title=placeholder, data-action="save", data-trigger="change")
+
+component InputNumberWithButtons(id string, value float64, label string, placeholder string, min string, max string, step string)
+	.widget-section
+		label(for=id)= label + ":"
+		.number-input-container
+			input.widget-ui-element.action(id=id, data-field=id, type="number", value=value, min=min, max=max, step=step, placeholder=placeholder, title=placeholder, data-action="save", data-trigger="change")
+			button.action(data-action="addNumber", data-trigger="click", data-id=id, data-add="1")
+				RawIcon("plus")
+			button.action(data-action="addNumber", data-trigger="click", data-id=id, data-add="-1")
+				RawIcon("minus")
+
+component InputSelection(id string, value string, label string, placeholder string, options []*arn.Option)
+	.widget-section
+		label(for=id)= label + ":"
+		select.widget-ui-element.action(id=id, data-field=id, value=value, title=placeholder, data-action="save", data-trigger="change")
+			each option in options
+				option(value=option.Value)= option.Label
+
+component InputTags(id string, value []string, label string, tooltip string)
+	.widget-section
+		label(for=id)= label + ":"
+		.tags(id=id)
+			for index, tag := range value
+				.tag.tag-edit
+					span.tag-title.action(contenteditable="true", data-trigger="focusout", data-action="save", data-field=id + "[" + strconv.Itoa(index) + "]")= tag
+				button.tag-remove.action(data-action="arrayRemove", data-trigger="click", data-field=id, data-index=index)
+					RawIcon("trash")
+			
+			button.tag-add.action(data-action="arrayAppend", data-trigger="click", data-field=id)
+				RawIcon("plus")
+		
+		p!= tooltip
+			

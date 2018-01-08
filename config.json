@@ -1,15 +1,39 @@
 {
   "domain": "scott-rayapoulle.fr",
   "title": "Scott Rayapoullé",
-  "fonts": [],
+  "fonts": [
+    "Spectral",
+    "Open Sans"
+  ],
   "styles": [
     "include/config",
+    "include/dark",
+    "include/mixins",
     "reset",
-    "base"
+    "base",
+    "typography",
+    "mountable",
+    "layout",
+    "navigation",
+    "headers",
+    "input",
+    "grid",
+    "forum",
+    "tabs",
+    "user",
+    "video",
+    "loading",
+    "fade",
+    "mobile",
+    "embedded"
   ],
   "scripts": {
     "main": "main"
   },
+  "push": [
+    "/scripts",
+    "/styles"
+  ],
   "manifest": {
     "name": "",
     "short_name": "Untitled",

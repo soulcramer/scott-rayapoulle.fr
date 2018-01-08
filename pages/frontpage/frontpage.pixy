@@ -1,0 +1,8 @@
+component FrontPage
+	.frontpage-background
+
+	.frontpage
+		h1 Scott Rayapoullé
+
+		h2 Yop! Yop! I'm currently an apprentice doing Android
+

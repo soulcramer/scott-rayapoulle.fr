@@ -1,0 +1,11 @@
+.lazy
+	visibility hidden
+	opacity 0
+
+.element-found
+	visibility visible
+	opacity 1 !important
+
+.element-not-found
+	visibility hidden
+	opacity 0 !important

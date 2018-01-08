@@ -1,0 +1,18 @@
+h1, h2
+	font-size 2em
+	font-weight bold
+	text-align center
+	line-height 1.3em
+
+h3
+	font-size 1.5em
+	line-height 1.6em
+	text-align left
+	margin-top 0.6em
+
+h1, h2, h3
+	a
+		color text-color
+
+.page-title
+	display none
