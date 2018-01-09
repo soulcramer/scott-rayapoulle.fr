@@ -1,5 +1,0 @@
-component PostableList(postables []arn.Postable, user *arn.User)
-	.thread
-		.posts
-			each post in postables
-				Postable(post, user, "")
