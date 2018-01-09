@@ -23,13 +23,6 @@ component InputNumberWithButtons(id string, value float64, label string, placeho
 			button.action(data-action="addNumber", data-trigger="click", data-id=id, data-add="-1")
 				RawIcon("minus")
 
-component InputSelection(id string, value string, label string, placeholder string, options []*arn.Option)
-	.widget-section
-		label(for=id)= label + ":"
-		select.widget-ui-element.action(id=id, data-field=id, value=value, title=placeholder, data-action="save", data-trigger="change")
-			each option in options
-				option(value=option.Value)= option.Label
-
 component InputTags(id string, value []string, label string, tooltip string)
 	.widget-section
 		label(for=id)= label + ":"
