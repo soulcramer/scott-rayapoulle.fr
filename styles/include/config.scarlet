@@ -18,7 +18,7 @@ white = #ffffff
 // Colors
 text-color = rgb(60, 60, 60)
 bg-color = white
-main-color = rgb(248, 165, 130)
+main-color = primary-color
 link-color = primary-dark-color
 link-hover-color = primary-color
 link-active-color = link-hover-color
