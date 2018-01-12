@@ -5,6 +5,7 @@ import (
 	"github.com/soulcramer/scott-rayapoulle.fr/components/css"
 	"github.com/soulcramer/scott-rayapoulle.fr/middleware"
 	"github.com/soulcramer/scott-rayapoulle.fr/pages"
+	"strings"
 )
 
 var app = aero.New()
@@ -33,6 +34,11 @@ func configure(app *aero.Application) *aero.Application {
 		middleware.Log(),
 		middleware.Session(),
 	)
+
+	// Do not use HTTP/2 push on service worker requests
+	app.AddPushCondition(func(ctx *aero.Context) bool {
+		return !strings.Contains(ctx.Request().Header().Get("Referer"), "/service-worker")
+	})
 
 	return app
 }
