@@ -1,7 +1,7 @@
 component Sidebar
 	aside#sidebar
 		//- User avatar
-		img.user-image.lazy(src="/images/brand/64.png", data-src="/images/brand/64.png", data-webp="true", alt="Photo of scott")
+		//img.user-image.lazy(src="/images/brand/64.png", data-src="/images/brand/64.png", data-webp="true", alt="Photo of scott")
 
 		SidebarButton("Home", "/", "home")
 
