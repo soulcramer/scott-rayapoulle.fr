@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"strict": false,
+		"strictFunctionTypes": false
+	},
+	"compileOnSave": true,
+	"buildOnSave": false
+}

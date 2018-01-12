@@ -9,6 +9,7 @@ component Layout(app *aero.Application, content string)
 			#columns
 				Sidebar
 				Content(content)
+			LoadingAnimation
 			script(src="/scripts")
 
 component Content(content string)

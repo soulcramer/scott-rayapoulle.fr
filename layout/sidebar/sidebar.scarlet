@@ -50,17 +50,16 @@ sidebar-spacing-y = 0.7rem
 
 	&.active
 		.sidebar-button
-			color tab-active-color
-			background tab-active-background
-			text-shadow tab-active-text-shadow
-			background tab-active-background
+			color link-hover-color
+			text-shadow link-hover-text-shadow
+			text-decoration none
 
 .sidebar-button
 	display flex
 	flex-direction row
 	align-items center
 	padding sidebar-spacing-y 1rem
-	// background ui-background
+	background ui-background
 
 	.icon
 		font-size 1rem
