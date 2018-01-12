@@ -4,6 +4,7 @@ import (
 	"github.com/aerogo/aero"
 	"github.com/soulcramer/scott-rayapoulle.fr/components/css"
 	"github.com/soulcramer/scott-rayapoulle.fr/components/js"
+	"io/ioutil"
 )
 
 // configureAssets adds all the routes used for media assets.
@@ -11,8 +12,16 @@ func configureAssets(app *aero.Application) {
 	// Script bundle
 	scriptBundle := js.Bundle()
 
+	// Service worker
+	serviceWorkerBytes, err := ioutil.ReadFile("sw/service-worker.js")
+	serviceWorker := string(serviceWorkerBytes)
+
 	// CSS bundle
 	cssBundle := css.Bundle()
+
+	if err != nil {
+		panic("Couldn't load service worker")
+	}
 
 	app.Get("/scripts", func(ctx *aero.Context) string {
 		return ctx.JavaScript(scriptBundle)
@@ -20,6 +29,10 @@ func configureAssets(app *aero.Application) {
 
 	app.Get("/styles", func(ctx *aero.Context) string {
 		return ctx.CSS(cssBundle)
+	})
+
+	app.Get("/service-worker", func(ctx *aero.Context) string {
+		return ctx.JavaScript(serviceWorker)
 	})
 
 	// For benchmarks
